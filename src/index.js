@@ -20,7 +20,7 @@ exports.max = function max(array) {
  * @param {Array} array
  */
 exports.avg = function avg(array) {
-    if (!arguments.length || !array.length) {
+    if (array === undefined || !array.length) {
         return 0;
     }
     return array.reduce((acc, curVal) => acc + curVal, 0) / array.length;
